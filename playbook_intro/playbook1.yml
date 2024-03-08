@@ -1,0 +1,7 @@
+- name: Introductory Playbook Lessons
+  hosts: all
+  become: 'yes'
+
+  tasks:
+    - name: Pinging with Playbooks
+      ping:

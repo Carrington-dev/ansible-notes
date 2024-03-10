@@ -27,8 +27,8 @@
    27  ansible --version
    28  ansible -version
    29  clear
-   30  AWS_ACCESS_KEY_ID='AKIA5CRPEX4GARLPXEHE'
-   31  export AWS_ACCESS_KEY_ID='AKIA5CRPEX4GARLPXEHE'
+   30  AWS_ACCESS_KEY_ID='f'
+   31  export AWS_ACCESS_KEY_ID='f'
    32  clear
    33  export AWS_SECRET_ACCESS_KEY='IDa4pY5QfrElJyNZ8BVgh/7xUkfsGvHTWrP0r49w'
    34  ansible-inventory -i demo.aws_ec2.yml --graph

@@ -1,0 +1,140 @@
+    1  mkdir ansible
+    2  rmdir ansible/
+    3  clear
+    4  sudo ~/.ssh/id_git_key
+    5  sudo nano ~/.ssh/id_git_key
+    6  sudo ls ~/.ssh/id_git_key
+    7  git clone https://github.com/Carrington-dev/ansible-notes.git
+    8  ls
+    9  sudo mv ansible-notes/ ansible
+   10  ls
+   11  cd ansible/
+   12  git pull
+   13  ls
+   14  clear
+   15  python3 --version
+   16  python --version
+   17  python -m venv senv
+   18  python3 -m venv senv
+   19  sudo apt-get update
+   20  sudo apt-get upgrade -y
+   21  sudo apt-get install python3-venv
+   22  clear
+   23  python3 -m venv senv
+   24  source senv/bin/activate
+   25  pip3 install -r requirements.txt 
+   26  clear
+   27  ansible --version
+   28  ansible -version
+   29  clear
+   30  AWS_ACCESS_KEY_ID='AKIA5CRPEX4GARLPXEHE'
+   31  export AWS_ACCESS_KEY_ID='AKIA5CRPEX4GARLPXEHE'
+   32  clear
+   33  export AWS_SECRET_ACCESS_KEY='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'
+   34  ansible-inventory -i demo.aws_ec2.yml --graph
+   35  clear
+   36  ansible all -i demo.aws_ec2.yml -u ubuntu -m ping
+   37  sudo nano ~/.ssh/id_rsa
+   38  ansible all -i demo.aws_ec2.yml -u ubuntu -m ping
+   39  clear
+   40  ansible-playbook -i demo.aws_ec2.yml -u ubuntu playbook_intro/playbook1.yml 
+   41  sudo nano playbook_intro/playbook2.yml 
+   42  ansible-playbook -i demo.aws_ec2.yml -u ubuntu playbook_intro/playbook2.yml 
+   43  sudo nano playbook_intro/playbook2.yml 
+   44  ansible-playbook -i demo.aws_ec2.yml -u ubuntu playbook_intro/playbook2.yml 
+   45  sudo rm playbook_intro/playbook2.yml 
+   46  sudo nano playbook_intro/playbook2.yml 
+   47  clear
+   48  sudo nano playbook_intro/playbook2.yml 
+   49  ansible-playbook -i demo.aws_ec2.yml -u ubuntu playbook_intro/playbook2.yml 
+   50  sudo rm playbook_intro/playbook2.yml 
+   51  sudo nano playbook_intro/playbook2.yml 
+   52  ansible-playbook -i demo.aws_ec2.yml -u ubuntu playbook_intro/playbook2.yml 
+   53  clear
+   54  ls
+   55  cd ansible/
+   56  source senv/bin/activate
+   57  ls
+   58  sudo nano playbook_intro/playbook3.yml
+   59  sudo chmod 0755 playbook_intro/playbook3.yml 
+   60  playbook_intro/playbook3.yml
+   61  sudo chmod 0755 playbook_intro/playbook3.yml 
+   62  sudo nano playbook_intro/playbook3.yml
+   63  playbook_intro/playbook3.yml
+   64  sudo nano playbook_intro/playbook3.yml
+   65  where ansible-playbook
+   66  what ansible-playbook
+   67  which ansible-playbook 
+   68  sudo nano playbook_intro/playbook3.yml
+   69  playbook_intro/playbook3.yml
+   70  sudo nano playbook_intro/playbook3.yml
+   71  playbook_intro/playbook3.yml
+   72  ls
+   73  sudo nano hosts 
+   74  playbook_intro/playbook3.yml
+   75  clear
+   76  playbook_intro/playbook3.yml
+   77  sudo nano playbook_intro/playbook3.yml 
+   78  playbook_intro/playbook3.yml
+   79  playbook_intro/playbook4.yml
+   80  sudo nano playbook_intro/playbook4.yml 
+   81  sudo chmod 0755 playbook_intro/playbook4.yml 
+   82  playbook_intro/playbook4.yml
+   83  sudo nano playbook_intro/playbook5.yml 
+   84  sudo chmod 0755 playbook_intro/playbook5.yml 
+   85  playbook_intro/playbook5.yml
+   86  sudo nano playbook_intro/playbook6.yml 
+   87  sudo chmod 0755 playbook_intro/playbook6.yml 
+   88  playbook_intro/playbook6.yml 
+   89  git add .
+   90  git commit -m "Added debugging module usage on ansible" 
+   91  git push
+   92  eval $(ssh-agent -s)
+   93  ssh-add ~/.ssh/id_git_key
+   94  ls ~/.ssh/
+   95  git push -u origin main
+   96  sudo nano ~/.ssh/id_git_key
+   97  ssh-add ~/.ssh/id_git_key
+   98  git push -u origin main
+   99  git remote remove origin 
+  100  git remote add origin git@github.com:Carrington-dev/ansible-notes.git
+  101  git push -u origin main
+  102  clear
+  103  sudo nano playbook_intro/playbook7.yml
+  104  sudo chmod 755 playbook_intro/playbook7.yml 
+  105  playbook_intro/playbook7.yml 
+  106  sudo nano playbook_intro/playbook7.yml
+  107  playbook_intro/playbook7.yml 
+  108  sudo nano playbook_intro/playbook7.yml
+  109  playbook_intro/playbook7.yml 
+  110  sudo  rm playbook_intro/playbook7.yml 
+  111  sudo  nano playbook_intro/playbook7.yml 
+  112  playbook_intro/playbook7.yml 
+  113  sudo chmod 755 playbook_intro/playbook7.yml 
+  114  playbook_intro/playbook7.yml 
+  115  sudo  nano playbook_intro/playbook7.yml 
+  116  playbook_intro/playbook7.yml 
+  117  sudo  nano playbook_intro/playbook7.yml 
+  118  playbook_intro/playbook7.yml 
+  119  sudo  nano playbook_intro/playbook7.yml 
+  120  playbook_intro/playbook7.yml 
+  121  playbook_intro/playbook6.yml 
+  122  sudo  nano playbook_intro/playbook7.yml 
+  123  playbook_intro/playbook6.yml 
+  124  playbook_intro/playbook7.yml 
+  125  sudo  nano playbook_intro/playbook7.yml 
+  126  playbook_intro/playbook7.yml 
+  127  clear
+  128  playbook_intro/playbook7.yml 
+  129  git add .
+  130  git commit -m "Added debugging at level 2 verbosity"
+  131  git push
+  132  clear
+  133  playbook_intro/playbook7.yml  -i demo.aws_ec2.yml 
+  134  playbook_intro/playbook7.yml  all -i demo.aws_ec2.yml 
+  135  playbook_intro/playbook7.yml -i demo.aws_ec2.yml 
+  136  playbook_intro/playbook7.yml
+  137  ansible-playbook -i demo.aws_ec2.yml  ping
+  138  ansible-playbook -i demo.aws_ec2.yml  playbook_intro/playbook1.yml 
+  139  ansible-playbook -i demo.aws_ec2.yml  playbook_intro/playbook7.yml 
+  140  history > all_comtext.txt

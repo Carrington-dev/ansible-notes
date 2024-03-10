@@ -1,0 +1,16 @@
+- name: Running Multiple Tasks
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Install nginx on ec2-instances
+      yum:
+        name: nginx
+        version: latest
+    
+    - name: Ensuring that nginx is running
+      service:
+        name: nginx
+        state: started

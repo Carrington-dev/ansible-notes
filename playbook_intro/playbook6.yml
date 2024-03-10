@@ -1,0 +1,25 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Tasks for debugging module
+      debug:
+          msg: "Debugging on Ansible Platform"
+
+
+    - name: Tasks for debugging module multi-line
+      debug:
+          msg: 
+          - "Debugging on Ansible Platform with multilines"
+          - "Debugging on Ansible Platform line 2"
+
+    - name: Print variables in ansible
+      debug:
+          msg: 
+          - "My hostname-ip is {{ inventory_hostname }}"
+          - My hostname-ip is {{ inventory_hostname }}
+          - System {{ inventory_hostname }} has a gateway of {{ ansible_default_ipv4.gateway }}

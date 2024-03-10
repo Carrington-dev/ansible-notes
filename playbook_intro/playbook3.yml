@@ -1,0 +1,11 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Checking Connection via Ping
+      debug:
+          msg: "Debugging on Ansible Platform"

@@ -1,0 +1,24 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  vars:
+    my_name: "Carrington Mulyea"
+    my_age: 28
+    location: Pretoria, South Africa
+
+  tasks:
+    - name: Reading variables on playbook debug module
+      debug:
+          var: my_name
+          
+  tasks:
+    - name: Reading variables on playbook debug module in statements
+      debug:
+          msg:
+          - "My name is {{ my_name }}"
+          - "I am {{ my_age }} years old"
+          - "I live in {{ location }}"

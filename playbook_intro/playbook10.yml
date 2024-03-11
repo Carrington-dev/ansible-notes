@@ -8,11 +8,12 @@
   vars:
     my_name: "Carrington Mulyea"
     my_age: 28
+    surname: "Muleya"
     names: [ "Carrington", "Chalmers", "Portia", "Precious" ]
 
   
   tasks:
-    - name: Reading variables on playbook debug module in statements
+    - name: Membership operators
       debug:
           msg:
           - "My name is {{ my_name }}"
@@ -25,3 +26,12 @@
           - "The statement that Chalmers is in names is {{ names[1] in names}}"
           - "The statement that Precious is in names is {{ names[2] in names}}"
           - "The statement that {{ my_age }} is in names is {{ my_name in names}}"
+
+    - name: Tests operators
+      debug:
+          msg:
+          - "{{ surname }} is upper  {{ surname is upper }}"
+          - "{{ surname }} is lower  {{ surname is lower }}"
+          - "{{ surname }} is defined  {{ surname is defined }}"
+          - "{{ surname }} is undefined  {{ surname is undefined }}"
+          

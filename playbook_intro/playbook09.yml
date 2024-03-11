@@ -1,0 +1,41 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  vars:
+    my_name: "Carrington Mulyea"
+    my_age: 28
+    location: Pretoria, South Africa
+
+  vars_prompt:
+  - name: x
+    prompt: Enter the value of x is 
+    private: no
+
+  - name: y
+    prompt: "Enter the value of y is (non-zero)  : "
+    private: no
+
+
+  tasks:
+    - name: Reading variables on playbook debug module
+      debug:
+          var: my_name
+          
+  tasks:
+    - name: Reading variables on playbook debug module in statements
+      debug:
+          msg:
+          - "My name is {{ my_name }}"
+          - "I am {{ my_age }} years old"
+          - "I live in {{ location }}"
+
+          - "The value of x is {{ x }}"
+          - "The value of y is {{ y }}"
+          - "The value of x + y is {{ x|int + y|int }}"
+          - "The value of x - y is {{ x|int - y|int }}"
+          - "The value of x * y is {{ x|int * y|int }}"
+          - "The value of x / y is {{ x|int / y|int }}"

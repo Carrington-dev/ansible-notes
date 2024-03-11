@@ -1,0 +1,37 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+
+- name: Interactions with data collections
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  vars:
+    my_name: "Carrington Muleya"
+    interests: ["Artificial Intelligence", "React", "Python", "Java", "Swift", "Spring"]
+    languages:
+    - Python
+    - Java
+    - NodeJS
+    - Spring
+    - Spring-boot
+    - ReactJS
+    my_count: {"i": 1, "a": 0, "b":7}
+  
+  tasks:
+  - name: "Show all my interests"
+    debug:
+      var: interests
+
+  - name: "Show all my languages"
+    debug:
+      msg: 
+      - The total group of my languages is {{ languages }}
+      - The total group of my interests is {{ interests }}
+      - My favorite interest is {{ interests[0] }}
+      - My least favorite interest is {{ interests[5] }}
+      - The charector count is {{ my_count }}
+      # - The highest charector count is {{ my_count[b] }} not working
+      - The highest charector count is {{ my_count['b'] }}
+
+

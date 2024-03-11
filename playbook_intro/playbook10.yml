@@ -1,0 +1,27 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: localhost
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  vars:
+    my_name: "Carrington Mulyea"
+    my_age: 28
+    names: [ "Carrington", "Chalmers", "Portia", "Precious" ]
+
+  
+  tasks:
+    - name: Reading variables on playbook debug module in statements
+      debug:
+          msg:
+          - "My name is {{ my_name }}"
+          - "I am {{ my_age }} years old"
+          - "All our names are - {{ names }}"
+
+          - "The statement that {{ names }} is in names is {{ names in names}}"
+          - "The statement that {{ my_name }} is in names is {{ my_name in names}}"
+          - "The statement that Portia is in names is {{ names[0] in names}}"
+          - "The statement that Chalmers is in names is {{ names[1] in names}}"
+          - "The statement that Precious is in names is {{ names[2] in names}}"
+          - "The statement that {{ my_age }} is in names is {{ my_name in names}}"

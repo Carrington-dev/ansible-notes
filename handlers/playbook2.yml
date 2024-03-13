@@ -23,4 +23,8 @@
     - name: Ensure Nginx restart
       service:
         name: nginx
+<<<<<<< HEAD
         state: restarted
+=======
+        state: restarted
+>>>>>>> b3a48f3b6bf17b6fc1e2731612eff5238424a837

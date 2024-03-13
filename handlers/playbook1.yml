@@ -1,5 +1,5 @@
 #!/home/ubuntu/ansible/senv/bin/ansible-playbook
-- name: Conditional operators
+- name: Testing Handlers 
   hosts: localhost
   remote_user: ubuntu
   become: 'yes'
@@ -10,10 +10,17 @@
     y: False
     
   tasks:
-    - name: Conditional operators
+    - name: Testing Handlers 
       debug:
           msg:
           - "x and y is {{ x and y }}"
           - "x or y is {{ x or y }}"
           - "x or y and y and y  is {{ x or y and y and y  }}"
-          
+    notify:
+      - Handler testing
+
+  handlers:
+    - name: Testing Handlers 
+      debug:
+          msg:
+          - "This is the handler running after a notification"

@@ -1,0 +1,22 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Introduction Ansible Playbooks
+  hosts: localhost
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  
+  tasks:
+    - name: Tags Two
+      debug:
+          msg:
+          - "My name is carrington"
+      tags:
+        - "main"
+     
+    - name: Tags Two
+      debug:
+          msg:
+          - "My name is Mulalo 2"
+      
+     

@@ -20,7 +20,7 @@
       - Handler testing
 
   handlers:
-    - name: Testing Handlers 
+    - name: Handler testing
       debug:
           msg:
           - "This is the handler running after a notification"

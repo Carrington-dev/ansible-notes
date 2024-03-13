@@ -16,8 +16,8 @@
           - "x and y is {{ x and y }}"
           - "x or y is {{ x or y }}"
           - "x or y and y and y  is {{ x or y and y and y  }}"
-    notify:
-      - Handler testing
+      notify:
+        - Handler testing
 
   handlers:
     - name: Handler testing

@@ -1,0 +1,26 @@
+#!/home/ubuntu/ansible/senv/bin/ansible-playbook
+- name: Installing WebServer
+  hosts: all
+  remote_user: ubuntu
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Ensure Nginx is at the Latest Version
+      apt:
+        name: nginx
+        state: present
+      notify:
+        - Ensure Nginx is Running
+        - Ensure Nginx restart 
+
+  handlers:
+    - name: Ensure Nginx is Running
+      service:
+        name: nginx
+        state: started
+
+    - name: Ensure Nginx restart
+      service:
+        name: nginx
+        state: restarted

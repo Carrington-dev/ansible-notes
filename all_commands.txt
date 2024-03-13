@@ -63,7 +63,6 @@
    63  playbook_intro/playbook3.yml
    64  sudo nano playbook_intro/playbook3.yml
    65  where ansible-playbook
-   66  what ansible-playbook
    67  which ansible-playbook 
    68  sudo nano playbook_intro/playbook3.yml
    69  playbook_intro/playbook3.yml
